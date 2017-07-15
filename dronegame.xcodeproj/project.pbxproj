@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1791F1ADEF000EC09A3 /* main.m */; };
+		19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */; };
+		19B9F17F1F1ADEF000EC09A3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F17E1F1ADEF000EC09A3 /* art.scnassets */; };
+		19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1811F1ADEF000EC09A3 /* GameViewController.m */; };
+		19B9F1851F1ADEF000EC09A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1831F1ADEF000EC09A3 /* Main.storyboard */; };
+		19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */; };
+		19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */; };
+		19B9F1951F1ADEF000EC09A3 /* dronegameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1941F1ADEF000EC09A3 /* dronegameTests.m */; };
+		19B9F1A01F1ADEF000EC09A3 /* dronegameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F19F1F1ADEF000EC09A3 /* dronegameUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		19B9F1911F1ADEF000EC09A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B9F16D1F1ADEF000EC09A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B9F1741F1ADEF000EC09A3;
+			remoteInfo = dronegame;
+		};
+		19B9F19C1F1ADEF000EC09A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B9F16D1F1ADEF000EC09A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19B9F1741F1ADEF000EC09A3;
+			remoteInfo = dronegame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19B9F1751F1ADEF000EC09A3 /* dronegame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dronegame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B9F1791F1ADEF000EC09A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19B9F17E1F1ADEF000EC09A3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		19B9F1801F1ADEF000EC09A3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		19B9F1811F1ADEF000EC09A3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		19B9F1841F1ADEF000EC09A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19B9F1891F1ADEF000EC09A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19B9F18B1F1ADEF000EC09A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B9F1901F1ADEF000EC09A3 /* dronegameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dronegameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B9F1941F1ADEF000EC09A3 /* dronegameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dronegameTests.m; sourceTree = "<group>"; };
+		19B9F1961F1ADEF000EC09A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B9F19B1F1ADEF000EC09A3 /* dronegameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dronegameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B9F19F1F1ADEF000EC09A3 /* dronegameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dronegameUITests.m; sourceTree = "<group>"; };
+		19B9F1A11F1ADEF000EC09A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19B9F1721F1ADEF000EC09A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B9F18D1F1ADEF000EC09A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B9F1981F1ADEF000EC09A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19B9F16C1F1ADEF000EC09A3 = {
+			isa = PBXGroup;
+			children = (
+				19B9F1771F1ADEF000EC09A3 /* dronegame */,
+				19B9F1931F1ADEF000EC09A3 /* dronegameTests */,
+				19B9F19E1F1ADEF000EC09A3 /* dronegameUITests */,
+				19B9F1761F1ADEF000EC09A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19B9F1761F1ADEF000EC09A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B9F1751F1ADEF000EC09A3 /* dronegame.app */,
+				19B9F1901F1ADEF000EC09A3 /* dronegameTests.xctest */,
+				19B9F19B1F1ADEF000EC09A3 /* dronegameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19B9F1771F1ADEF000EC09A3 /* dronegame */ = {
+			isa = PBXGroup;
+			children = (
+				19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */,
+				19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */,
+				19B9F17E1F1ADEF000EC09A3 /* art.scnassets */,
+				19B9F1801F1ADEF000EC09A3 /* GameViewController.h */,
+				19B9F1811F1ADEF000EC09A3 /* GameViewController.m */,
+				19B9F1831F1ADEF000EC09A3 /* Main.storyboard */,
+				19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */,
+				19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */,
+				19B9F18B1F1ADEF000EC09A3 /* Info.plist */,
+				19B9F1781F1ADEF000EC09A3 /* Supporting Files */,
+			);
+			path = dronegame;
+			sourceTree = "<group>";
+		};
+		19B9F1781F1ADEF000EC09A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19B9F1791F1ADEF000EC09A3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19B9F1931F1ADEF000EC09A3 /* dronegameTests */ = {
+			isa = PBXGroup;
+			children = (
+				19B9F1941F1ADEF000EC09A3 /* dronegameTests.m */,
+				19B9F1961F1ADEF000EC09A3 /* Info.plist */,
+			);
+			path = dronegameTests;
+			sourceTree = "<group>";
+		};
+		19B9F19E1F1ADEF000EC09A3 /* dronegameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19B9F19F1F1ADEF000EC09A3 /* dronegameUITests.m */,
+				19B9F1A11F1ADEF000EC09A3 /* Info.plist */,
+			);
+			path = dronegameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19B9F1741F1ADEF000EC09A3 /* dronegame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B9F1A41F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegame" */;
+			buildPhases = (
+				19B9F1711F1ADEF000EC09A3 /* Sources */,
+				19B9F1721F1ADEF000EC09A3 /* Frameworks */,
+				19B9F1731F1ADEF000EC09A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dronegame;
+			productName = dronegame;
+			productReference = 19B9F1751F1ADEF000EC09A3 /* dronegame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		19B9F18F1F1ADEF000EC09A3 /* dronegameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B9F1A71F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegameTests" */;
+			buildPhases = (
+				19B9F18C1F1ADEF000EC09A3 /* Sources */,
+				19B9F18D1F1ADEF000EC09A3 /* Frameworks */,
+				19B9F18E1F1ADEF000EC09A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19B9F1921F1ADEF000EC09A3 /* PBXTargetDependency */,
+			);
+			name = dronegameTests;
+			productName = dronegameTests;
+			productReference = 19B9F1901F1ADEF000EC09A3 /* dronegameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		19B9F19A1F1ADEF000EC09A3 /* dronegameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19B9F1AA1F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegameUITests" */;
+			buildPhases = (
+				19B9F1971F1ADEF000EC09A3 /* Sources */,
+				19B9F1981F1ADEF000EC09A3 /* Frameworks */,
+				19B9F1991F1ADEF000EC09A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19B9F19D1F1ADEF000EC09A3 /* PBXTargetDependency */,
+			);
+			name = dronegameUITests;
+			productName = dronegameUITests;
+			productReference = 19B9F19B1F1ADEF000EC09A3 /* dronegameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19B9F16D1F1ADEF000EC09A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ho;
+				TargetAttributes = {
+					19B9F1741F1ADEF000EC09A3 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					19B9F18F1F1ADEF000EC09A3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 19B9F1741F1ADEF000EC09A3;
+					};
+					19B9F19A1F1ADEF000EC09A3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 19B9F1741F1ADEF000EC09A3;
+					};
+				};
+			};
+			buildConfigurationList = 19B9F1701F1ADEF000EC09A3 /* Build configuration list for PBXProject "dronegame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19B9F16C1F1ADEF000EC09A3;
+			productRefGroup = 19B9F1761F1ADEF000EC09A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19B9F1741F1ADEF000EC09A3 /* dronegame */,
+				19B9F18F1F1ADEF000EC09A3 /* dronegameTests */,
+				19B9F19A1F1ADEF000EC09A3 /* dronegameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19B9F1731F1ADEF000EC09A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B9F17F1F1ADEF000EC09A3 /* art.scnassets in Resources */,
+				19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */,
+				19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */,
+				19B9F1851F1ADEF000EC09A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B9F18E1F1ADEF000EC09A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B9F1991F1ADEF000EC09A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19B9F1711F1ADEF000EC09A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */,
+				19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */,
+				19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B9F18C1F1ADEF000EC09A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B9F1951F1ADEF000EC09A3 /* dronegameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19B9F1971F1ADEF000EC09A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19B9F1A01F1ADEF000EC09A3 /* dronegameUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		19B9F1921F1ADEF000EC09A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19B9F1741F1ADEF000EC09A3 /* dronegame */;
+			targetProxy = 19B9F1911F1ADEF000EC09A3 /* PBXContainerItemProxy */;
+		};
+		19B9F19D1F1ADEF000EC09A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19B9F1741F1ADEF000EC09A3 /* dronegame */;
+			targetProxy = 19B9F19C1F1ADEF000EC09A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		19B9F1831F1ADEF000EC09A3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19B9F1841F1ADEF000EC09A3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19B9F1891F1ADEF000EC09A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19B9F1A21F1ADEF000EC09A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		19B9F1A31F1ADEF000EC09A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19B9F1A51F1ADEF000EC09A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = dronegame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		19B9F1A61F1ADEF000EC09A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = dronegame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		19B9F1A81F1ADEF000EC09A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = dronegameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dronegame.app/dronegame";
+			};
+			name = Debug;
+		};
+		19B9F1A91F1ADEF000EC09A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = dronegameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dronegame.app/dronegame";
+			};
+			name = Release;
+		};
+		19B9F1AB1F1ADEF000EC09A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = dronegameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = dronegame;
+			};
+			name = Debug;
+		};
+		19B9F1AC1F1ADEF000EC09A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = dronegameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = dronegame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19B9F1701F1ADEF000EC09A3 /* Build configuration list for PBXProject "dronegame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B9F1A21F1ADEF000EC09A3 /* Debug */,
+				19B9F1A31F1ADEF000EC09A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19B9F1A41F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B9F1A51F1ADEF000EC09A3 /* Debug */,
+				19B9F1A61F1ADEF000EC09A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		19B9F1A71F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B9F1A81F1ADEF000EC09A3 /* Debug */,
+				19B9F1A91F1ADEF000EC09A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		19B9F1AA1F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19B9F1AB1F1ADEF000EC09A3 /* Debug */,
+				19B9F1AC1F1ADEF000EC09A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19B9F16D1F1ADEF000EC09A3 /* Project object */;
+}
