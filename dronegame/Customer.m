@@ -21,6 +21,16 @@
         
         _destination = [CustomerDestination new];
         _destination.customer = self;
+        
+        CGFloat destinationAngle = angleOfElevationForPoints(self.center, _destination.center);
+        CGFloat indicatorRadius = 15.0;
+        
+        _directionalIndicator = [DirectionalIndicator new];
+        _directionalIndicator.center = self.boundsCenter;
+        _directionalIndicator.x += indicatorRadius * cos(destinationAngle);
+        _directionalIndicator.y += indicatorRadius * sin(destinationAngle);
+        
+        [self addSubview:_directionalIndicator];
     }
     return self;
 }
@@ -81,6 +91,10 @@
 {
     _seated = seated;
     [self updateColor];
+    
+    if (seated) {
+        [_directionalIndicator removeFromSuperview];
+    }
 }
 
 - (void)updateColor

@@ -17,5 +17,6 @@
 #import "GameUtils.h"
 #import "UIView+Shortcuts.h"
 #import "CustomerDestination.h"
+#import "DirectionalIndicator.h"
 
 #endif /* PrefixHeader_pch */

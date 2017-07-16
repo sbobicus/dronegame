@@ -46,6 +46,7 @@ DroneManager * sharedDroneManager;
     for (int i = 0; i < droneCount; i++) {
         Drone * drone = [Drone new];
         drone.center = [[GameViewController instance] randomPosition];
+        drone.flightDestination = drone.center;
         [_drones addObject:drone];
     }
 }

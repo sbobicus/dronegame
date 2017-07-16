@@ -14,6 +14,7 @@ GameViewController * sharedGameViewController;
 
 @property (nonatomic, strong) TouchInputHandler * touchInputHandler;
 @property (nonatomic, strong) NSTimer * customerCreationTimer;
+@property (nonatomic, strong) CADisplayLink * displayLink;
 
 @end
 
@@ -40,11 +41,16 @@ GameViewController * sharedGameViewController;
     
     _touchInputHandler = [TouchInputHandler new];
     _touchInputHandler.view = self.view;
+    
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
+    _displayLink.frameInterval = 1;
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
-
+    
     self.view.backgroundColor = [UIColor greenColor];
 
     [[DroneManager instance] prepareDrones];
@@ -54,6 +60,13 @@ GameViewController * sharedGameViewController;
     }
     
     _customerCreationTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(addNewCustomer) userInfo:nil repeats:YES];
+}
+
+- (void)gameLoop
+{
+    for (Drone * drone in [DroneManager instance].drones) {
+        [drone updatePosition];
+    }
 }
 
 - (void)addNewCustomer

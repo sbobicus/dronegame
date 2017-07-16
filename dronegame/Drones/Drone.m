@@ -6,12 +6,15 @@
 //  Copyright © 2017 ho. All rights reserved.
 //
 
+#define MAX_FLIGHT_SPEED 0.5
+#define ACCELERATION_RATE 0.01
+
 #import "Drone.h"
 
 @interface Drone()
 
 @property (nonatomic) CGFloat vehicleWidth;
-@property (nonatomic, strong) NSMutableArray * boardedCustomers;
+@property (nonatomic, strong) void (^flightCompletionBlock)(void);
 
 @end
 
@@ -48,19 +51,10 @@
 - (void)pickUpCustomer:(Customer *)customer
 {
     customer.scheduledToBePickedUp = YES;
-    CGPoint customerLocation = customer.center;
-    CGFloat time = [self flightTimeForLocation:customerLocation];
-    self.flying = YES;
     
-    [UIView animateWithDuration:time delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.center = customerLocation;
-    } completion:^(BOOL finished) {
-        self.flying = NO;
-        
-        if (finished) {
-            if (!customer.containingDrone) {
-                [self boardCustomer:customer];
-            }
+    [self flyToLocation:customer.center withCompletion:^{
+        if (!customer.containingDrone) {
+            [self boardCustomer:customer];
         }
     }];
 }
@@ -84,37 +78,31 @@
 
 - (void)flyToDestination:(CustomerDestination *)destination
 {
-    self.flying = YES;
-    CGPoint location = destination.center;
-    CGFloat time = [self flightTimeForLocation:location];
-    
-    [UIView animateWithDuration:time delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.center = location;
-    } completion:^(BOOL finished) {
-        self.flying = NO;
-        
-        if (finished) {
+    [self flyToLocation:destination.center withCompletion:^{
+        if (CGPointEqualToPoint(self.center, destination.center)) {
             [self unboardCustomer:destination.customer];
         }
     }];
 }
 
+- (void)flyToLocation:(CGPoint)pt withCompletion:(void (^)(void))completion
+{
+    [self flyToLocation:pt];
+    _flightCompletionBlock = completion;
+}
+
 - (void)flyToLocation:(CGPoint)pt
 {
     self.flying = YES;
-    CGFloat time = [self flightTimeForLocation:pt];
-    
-    [UIView animateWithDuration:time delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.center = pt;
-    } completion:^(BOOL finished) {
-        self.flying = NO;
-    }];
+    _flightDestination = pt;
+    _flightCompletionBlock = nil;
+    [self updateAngleForDestination:pt];
 }
 
 - (CGFloat)flightTimeForLocation:(CGPoint)location
 {
     CGFloat distance = pythag(location, self.center);
-    CGFloat time = 1.0 * pow(distance, 0.5);
+    CGFloat time = 0.2 * pow(distance, 0.9);
     return time;
 }
 
@@ -158,13 +146,49 @@
 
 - (void)updateColor
 {
-    if (_flying) {
+    if (_flying && _flightCompletionBlock) {
         self.backgroundColor = [UIColor colorWithWhite:0.4 alpha:1.0];
     } else if (_selected) {
         self.backgroundColor = [UIColor redColor];
     } else {
         self.backgroundColor = [UIColor whiteColor];
     }
+}
+
+- (void)updatePosition
+{
+    CGPoint currentPosition = self.center;
+    
+    if (!CGPointEqualToPoint(currentPosition, _flightDestination)) {
+        CGFloat flightAngle = angleOfElevationForPoints(currentPosition, _flightDestination);
+        CGFloat distance = pythag(currentPosition, _flightDestination);
+        
+        if (distance < _flightSpeed) {
+            self.center = _flightDestination;
+            self.flying = NO;
+            
+            if (_flightCompletionBlock) {
+                _flightCompletionBlock();
+                _flightCompletionBlock = nil;
+            }
+        } else {
+            _flightSpeed += 0.1;
+            _flightSpeed = fmin(_flightSpeed, MAX_FLIGHT_SPEED);
+            
+            CGFloat dX = _flightSpeed * cos(flightAngle);
+            CGFloat dY = _flightSpeed * sin(flightAngle);
+            
+            self.center = CGPointMake(currentPosition.x + dX, currentPosition.y + dY);
+        }
+    }
+}
+
+- (void)updateAngleForDestination:(CGPoint)pt
+{
+    CGFloat dX = pt.x - self.center.x;
+    CGFloat dY = pt.y - self.center.y;
+    CGFloat angle = -atan(dX / dY);
+    self.transform = CGAffineTransformMakeRotation(angle);
 }
 
 @end

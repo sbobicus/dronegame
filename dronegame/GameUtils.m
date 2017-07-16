@@ -40,5 +40,30 @@ CGFloat pythag(CGPoint pt1, CGPoint pt2)
     return d;
 }
 
+CGFloat angleOfElevationForPoints(CGPoint point1, CGPoint point2)
+{
+    CGFloat dX = point2.x - point1.x;
+    
+    if (dX == 0) {
+        dX += 0.00000001;
+    }
+    
+    CGFloat dY = point2.y - point1.y;
+    CGFloat elevation = atanf(dY / dX);
+    
+    if (dX < 0) {
+        elevation -= M_PI;
+    }
+    
+    return elevation;
+}
+
+inline CGPoint weightedAverageBetween(CGPoint pt1, CGPoint pt2, CGFloat fraction)
+{
+    CGFloat inv = 1 - fraction;
+    CGFloat x = pt1.x * inv + pt2.x * fraction;
+    CGFloat y = pt1.y * inv + pt2.y * fraction;
+    return CGPointMake(x, y);
+}
 
 @end

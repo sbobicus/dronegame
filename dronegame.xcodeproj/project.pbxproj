@@ -22,6 +22,7 @@
 		CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35E1F1B02CE000156AA /* GameUtils.m */; };
 		CE47C3621F1B1052000156AA /* UIView+Shortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */; };
 		CE47C3681F1B1496000156AA /* CustomerDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3671F1B1496000156AA /* CustomerDestination.m */; };
+		CE47C36B1F1B31BA000156AA /* DirectionalIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C36A1F1B31BA000156AA /* DirectionalIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shortcuts.m"; sourceTree = "<group>"; };
 		CE47C3661F1B1496000156AA /* CustomerDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDestination.h; sourceTree = "<group>"; };
 		CE47C3671F1B1496000156AA /* CustomerDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDestination.m; sourceTree = "<group>"; };
+		CE47C3691F1B31BA000156AA /* DirectionalIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionalIndicator.h; sourceTree = "<group>"; };
+		CE47C36A1F1B31BA000156AA /* DirectionalIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionalIndicator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 				CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */,
 				CE47C3661F1B1496000156AA /* CustomerDestination.h */,
 				CE47C3671F1B1496000156AA /* CustomerDestination.m */,
+				CE47C3691F1B31BA000156AA /* DirectionalIndicator.h */,
+				CE47C36A1F1B31BA000156AA /* DirectionalIndicator.m */,
 			);
 			path = dronegame;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				CE47C3501F1AEE4E000156AA /* Drone.m in Sources */,
 				CE47C35C1F1AFC37000156AA /* Customer.m in Sources */,
 				CE47C3621F1B1052000156AA /* UIView+Shortcuts.m in Sources */,
+				CE47C36B1F1B31BA000156AA /* DirectionalIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

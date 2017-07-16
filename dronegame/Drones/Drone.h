@@ -13,10 +13,15 @@
 @interface Drone : UIView
 
 @property (nonatomic) BOOL selected, flying;
+@property (nonatomic) CGFloat flightSpeed, flightAngle;
+@property (nonatomic) CGPoint flightDestination;
+@property (nonatomic, strong) NSMutableArray * boardedCustomers;
 
 - (void)pickUpCustomer:(Customer *)customer;
 - (void)flyToDestination:(CustomerDestination *)destination;
 - (void)flyToLocation:(CGPoint)pt;
 - (CustomerDestination *)getCustomerDestinationNearPoint:(CGPoint)pt;
+- (void)updatePosition;
+- (void)updateAngleForDestination:(CGPoint)pt;
 
 @end

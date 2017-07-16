@@ -12,6 +12,9 @@
 @property (nonatomic, strong) Customer * nearestCustomer;
 @property (nonatomic, strong) CustomerDestination * nearestCustomerDestination;
 
+@property (nonatomic, strong) NSDate * touchesBeganDate;
+@property (nonatomic) CGPoint touchesBeganLocation;
+
 @end
 
 @implementation TouchInputHandler
@@ -22,19 +25,16 @@
     _selectedDrone = [[DroneManager instance] getDroneNearPosition:pt];
     _selectedDrone.selected = YES;
     
+    _touchesBeganDate = [NSDate new];
+    _touchesBeganLocation = pt;
+    
     [self updateNearestObjectWithPosition:pt];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint pt = [self positionForTouches:touches];
-    
-    CGFloat dX = pt.x - _selectedDrone.center.x;
-    CGFloat dY = pt.y - _selectedDrone.center.y;
-    CGFloat angle = -atan(dX / dY);
-    
-    _selectedDrone.transform = CGAffineTransformMakeRotation(angle);
-    
+    [_selectedDrone updateAngleForDestination:pt];
     [self updateNearestObjectWithPosition:pt];
 }
 
@@ -78,7 +78,29 @@
         [_selectedDrone flyToDestination:_nearestCustomerDestination];
     } else {
         CGPoint pt = [self positionForTouches:touches];
-        [_selectedDrone flyToLocation:pt];
+        
+        CGFloat touchDuration = -_touchesBeganDate.timeIntervalSinceNow;
+        CGFloat dragDistance = pythag(pt, _touchesBeganLocation);
+        
+        if (touchDuration < 0.25 && dragDistance < 5.0) {
+            CustomerDestination * nearestDestination = nil;
+            CGFloat minDistance = CGFLOAT_MAX;
+            
+            for (Customer * customer in _selectedDrone.boardedCustomers) {
+                CGFloat flightDistance = pythag(_selectedDrone.center, customer.destination.center);
+                
+                if (flightDistance < minDistance) {
+                    minDistance = flightDistance;
+                    nearestDestination = customer.destination;
+                }
+            }
+            
+            if (nearestDestination) {
+                [_selectedDrone flyToDestination:nearestDestination];
+            }
+        } else {
+            [_selectedDrone flyToLocation:pt];
+        }
     }
     
     _nearestCustomerDestination.highlighted = NO;
