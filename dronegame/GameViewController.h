@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SceneKit/SceneKit.h>
+
+@class Customer;
 
 @interface GameViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray * customers;
+
 + (instancetype)instance;
 + (void)destroyInstance;
+
+- (CGPoint)randomPosition;
+- (Customer *)getNearestCustomer:(CGPoint)pt;
 
 @end

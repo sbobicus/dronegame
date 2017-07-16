@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  dronegame
+//
+//  Created by Lionel Seidman on 7/15/17.
+//  Copyright © 2017 ho. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "GameViewController.h"
+#import "DroneManager.h"
+#import "Drone.h"
+#import "TouchInputHandler.h"
+#import "Customer.h"
+#import "GameUtils.h"
+
+#endif /* PrefixHeader_pch */

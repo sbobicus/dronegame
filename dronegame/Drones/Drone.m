@@ -30,11 +30,38 @@
     self.backgroundColor = selected ? [UIColor redColor] : [UIColor grayColor];
 }
 
+- (void)pickUpCustomer:(Customer *)customer
+{
+    CGPoint customerLocation = customer.center;
+    CGFloat time = [self flightTimeForLocation:customerLocation];
+    
+    [UIView animateWithDuration:time delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.center = customerLocation;
+    } completion:^(BOOL finished) {
+        [self boardCustomer:customer];
+    }];
+}
+
+- (void)boardCustomer:(Customer *)customer
+{
+    [self addSubview:customer];
+    customer.frame = CGRectMake(2.0, 2.0, customer.frame.size.width, customer.frame.size.height);
+}
+
 - (void)flyToLocation:(CGPoint)pt
 {
-    [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    CGFloat time = [self flightTimeForLocation:pt];
+    
+    [UIView animateWithDuration:time delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.center = pt;
     } completion:nil];
+}
+
+- (CGFloat)flightTimeForLocation:(CGPoint)location
+{
+    CGFloat distance = pythag(location, self.center);
+    CGFloat time = 0.25 * pow(distance, 0.5);
+    return time;
 }
 
 @end

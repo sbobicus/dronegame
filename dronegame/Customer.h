@@ -1,5 +1,5 @@
 //
-//  Drone.h
+//  Customer.h
 //  dronegame
 //
 //  Created by Lionel Seidman on 7/15/17.
@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Drone : UIView
+@interface Customer : UIView
 
 @property (nonatomic) BOOL selected;
-
-- (void)pickUpCustomer:(Customer *)customer;
-- (void)flyToLocation:(CGPoint)pt;
 
 @end

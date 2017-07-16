@@ -19,6 +19,8 @@
 		CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3491F1AEE34000156AA /* TouchInputHandler.m */; };
 		CE47C3501F1AEE4E000156AA /* Drone.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34D1F1AEE4E000156AA /* Drone.m */; };
 		CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34F1F1AEE4E000156AA /* DroneManager.m */; };
+		CE47C35C1F1AFC37000156AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35B1F1AFC37000156AA /* Customer.m */; };
+		CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35E1F1B02CE000156AA /* GameUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,11 @@
 		CE47C34D1F1AEE4E000156AA /* Drone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drone.m; path = Drones/Drone.m; sourceTree = "<group>"; };
 		CE47C34E1F1AEE4E000156AA /* DroneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DroneManager.h; path = Drones/DroneManager.h; sourceTree = "<group>"; };
 		CE47C34F1F1AEE4E000156AA /* DroneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DroneManager.m; path = Drones/DroneManager.m; sourceTree = "<group>"; };
+		CE47C3591F1AFB63000156AA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CE47C35A1F1AFC37000156AA /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		CE47C35B1F1AFC37000156AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		CE47C35D1F1B02CE000156AA /* GameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtils.h; sourceTree = "<group>"; };
+		CE47C35E1F1B02CE000156AA /* GameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +132,11 @@
 				19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */,
 				19B9F18B1F1ADEF000EC09A3 /* Info.plist */,
 				19B9F1781F1ADEF000EC09A3 /* Supporting Files */,
+				CE47C3591F1AFB63000156AA /* PrefixHeader.pch */,
+				CE47C35A1F1AFC37000156AA /* Customer.h */,
+				CE47C35B1F1AFC37000156AA /* Customer.m */,
+				CE47C35D1F1B02CE000156AA /* GameUtils.h */,
+				CE47C35E1F1B02CE000156AA /* GameUtils.m */,
 			);
 			path = dronegame;
 			sourceTree = "<group>";
@@ -299,11 +311,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */,
+				CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */,
 				19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */,
 				19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */,
 				CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */,
 				CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */,
 				CE47C3501F1AEE4E000156AA /* Drone.m in Sources */,
+				CE47C35C1F1AFC37000156AA /* Customer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +399,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = dronegame/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -427,6 +442,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = dronegame/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

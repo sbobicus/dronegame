@@ -6,13 +6,10 @@
 //  Copyright © 2017 ho. All rights reserved.
 //
 
-#import "TouchInputHandler.h"
-#import "DroneManager.h"
-#import "Drone.h"
-
 @interface TouchInputHandler()
 
 @property (nonatomic, strong) Drone * selectedDrone;
+@property (nonatomic, strong) Customer * nearestCustomer;
 
 @end
 
@@ -34,6 +31,14 @@
     CGFloat angle = -atan(dX / dY);
     
     _selectedDrone.transform = CGAffineTransformMakeRotation(angle);
+    
+    Customer * nearestCustomer = [[GameViewController instance] getNearestCustomer:pt];
+    
+    if (nearestCustomer != _nearestCustomer) {
+        _nearestCustomer.selected = NO;
+        _nearestCustomer = nearestCustomer;
+        _nearestCustomer.selected = YES;
+    }
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -43,9 +48,18 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGPoint pt = [self positionForTouches:touches];
+    if (_nearestCustomer) {
+        [_selectedDrone pickUpCustomer:_nearestCustomer];
+    } else {
+        CGPoint pt = [self positionForTouches:touches];
+        [_selectedDrone flyToLocation:pt];
+    }
+    
+    _nearestCustomer.selected = NO;
     _selectedDrone.selected = NO;
-    [_selectedDrone flyToLocation:pt];
+    
+    _nearestCustomer = nil;
+    _selectedDrone = nil;
 }
 
 - (CGPoint)positionForTouches:(NSSet *)touches
