@@ -47,6 +47,8 @@
     [UIView animateWithDuration:0.4 delay:0.0 usingSpringWithDamping:0.3 initialSpringVelocity:1 options:0 animations:^{
         self.transform = CGAffineTransformIdentity;
     } completion:nil];
+    
+    [GameViewController instance].customersWaiting++;
 }
 
 - (void)popOut
@@ -64,6 +66,8 @@
             [self removeFromSuperview];
         }];
     }];
+    
+    [GameViewController instance].customersDelivered++;
 }
 
 - (void)setSelected:(BOOL)selected
@@ -94,12 +98,13 @@
 
 - (void)setSeated:(BOOL)seated
 {
+    if (seated && !_seated) {
+        [_directionalIndicator removeFromSuperview];
+        [GameViewController instance].customersWaiting--;
+    }
+    
     _seated = seated;
     [self updateColor];
-    
-    if (seated) {
-        [_directionalIndicator removeFromSuperview];
-    }
 }
 
 - (void)updateColor

@@ -13,8 +13,8 @@ GameViewController * sharedGameViewController;
 @interface GameViewController()
 
 @property (nonatomic, strong) TouchInputHandler * touchInputHandler;
-@property (nonatomic, strong) NSTimer * customerCreationTimer;
 @property (nonatomic, strong) CADisplayLink * displayLink;
+@property (nonatomic) NSInteger frameIndex;
 
 @end
 
@@ -45,6 +45,67 @@ GameViewController * sharedGameViewController;
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(gameLoop)];
     _displayLink.frameInterval = 1;
     [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    
+    _pauseButton = [self newLabel];
+    _pauseButton.textAlignment = NSTextAlignmentCenter;
+    
+    __weak GameViewController * _self = self;
+    
+    [_pauseButton setTapAction:^{
+        _self.gamePaused ^= 1;
+    }];
+    
+    [self updatePauseButton];
+    [self.view addSubview:_pauseButton];
+    
+    _customersDeliveredLabel = [self newLabel];
+    _customersDeliveredLabel.right = self.view.width - 5.0;
+    
+    _customersWaitingLabel = [self newLabel];
+    _customersWaitingLabel.right = _customersDeliveredLabel.x - 5.0;
+    
+    _pauseButton.width = _pauseButton.height;
+    _pauseButton.right = _customersWaitingLabel.x - 5.0;
+    
+    self.customersDelivered = 0;
+    self.customersWaiting = 0;
+}
+
+- (UILabel *)newLabel
+{
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 5.0, 80, 30)];
+    label.font = [UIFont fontWithName:@"Helvetica-Light" size:15.0];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor colorWithWhite:0.1 alpha:1.0];
+    label.layer.cornerRadius = 3.0;
+    label.layer.masksToBounds = YES;
+    
+    [self.view addSubview:label];
+    return label;
+}
+
+- (void)setGamePaused:(BOOL)gamePaused
+{
+    _gamePaused = gamePaused;
+    _displayLink.paused = gamePaused;
+    [self updatePauseButton];
+}
+
+- (void)updatePauseButton
+{
+    _pauseButton.text = _gamePaused ? @"▶" : @"❙❙";
+}
+
+- (void)setCustomersWaiting:(NSInteger)customersWaiting
+{
+    _customersWaiting = customersWaiting;
+    _customersWaitingLabel.text = [NSString stringWithFormat:@" 🤔 %lu", customersWaiting];
+}
+
+- (void)setCustomersDelivered:(NSInteger)customersDelivered
+{
+    _customersDelivered = customersDelivered;
+    _customersDeliveredLabel.text = [NSString stringWithFormat:@" 😎 %lu", customersDelivered];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -56,16 +117,20 @@ GameViewController * sharedGameViewController;
     [[DroneManager instance] prepareDrones];
 
     for (Drone * drone in [DroneManager instance].drones) {
-      [self.view addSubview:drone];
+        [self.view insertSubview:drone atIndex:0];
     }
-    
-    _customerCreationTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(addNewCustomer) userInfo:nil repeats:YES];
 }
 
 - (void)gameLoop
 {
     for (Drone * drone in [DroneManager instance].drones) {
         [drone updatePosition];
+    }
+    
+    _frameIndex++;
+    
+    if (_frameIndex % 180 == 0) {
+        [self addNewCustomer];
     }
 }
 
@@ -74,8 +139,9 @@ GameViewController * sharedGameViewController;
     Customer * customer = [Customer new];
     [customer popIn];
     [_customers addObject:customer];
-    [self.view addSubview:customer];
-    [self.view addSubview:customer.destination];
+    
+    [self.view insertSubview:customer atIndex:0];
+    [self.view insertSubview:customer.destination atIndex:0];
 }
 
 - (Customer *)getNearestCustomer:(CGPoint)pt
@@ -138,7 +204,7 @@ GameViewController * sharedGameViewController;
 
 - (void)dealloc
 {
-    [_customerCreationTimer invalidate];
+    [_displayLink invalidate];
 }
 
 @end
