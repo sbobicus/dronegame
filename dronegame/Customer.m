@@ -16,7 +16,12 @@
     if (self) {
         self.frame = CGRectMake(0, 0, 20.0, 20.0);
         self.center = [[GameViewController instance] randomPosition];
-        
+        UIImage *passenger = [UIImage imageNamed:@"grafixxx/passenger.png"];
+        UIImageView *passengerImageView = [[UIImageView alloc] initWithImage:passenger];
+        passengerImageView.frame = passengerImageView.bounds;
+        passengerImageView.center = self.boundsCenter;
+        [self addSubview:passengerImageView];
+
         [self updateColor];
         
         _destination = [CustomerDestination new];
