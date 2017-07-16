@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1925D7E41F1B1AA800AFC9A8 /* grafixxx in Resources */ = {isa = PBXBuildFile; fileRef = 1925D7E31F1B1AA800AFC9A8 /* grafixxx */; };
 		19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1791F1ADEF000EC09A3 /* main.m */; };
 		19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */; };
-		19B9F17F1F1ADEF000EC09A3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F17E1F1ADEF000EC09A3 /* art.scnassets */; };
 		19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1811F1ADEF000EC09A3 /* GameViewController.m */; };
-		19B9F1851F1ADEF000EC09A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1831F1ADEF000EC09A3 /* Main.storyboard */; };
 		19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */; };
 		19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */; };
 		19B9F1951F1ADEF000EC09A3 /* dronegameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1941F1ADEF000EC09A3 /* dronegameTests.m */; };
@@ -19,6 +18,10 @@
 		CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3491F1AEE34000156AA /* TouchInputHandler.m */; };
 		CE47C3501F1AEE4E000156AA /* Drone.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34D1F1AEE4E000156AA /* Drone.m */; };
 		CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34F1F1AEE4E000156AA /* DroneManager.m */; };
+		CE47C35C1F1AFC37000156AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35B1F1AFC37000156AA /* Customer.m */; };
+		CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35E1F1B02CE000156AA /* GameUtils.m */; };
+		CE47C3621F1B1052000156AA /* UIView+Shortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */; };
+		CE47C3681F1B1496000156AA /* CustomerDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3671F1B1496000156AA /* CustomerDestination.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1925D7E31F1B1AA800AFC9A8 /* grafixxx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grafixxx; path = dronegame/grafixxx; sourceTree = "<group>"; };
 		19B9F1751F1ADEF000EC09A3 /* dronegame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dronegame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B9F1791F1ADEF000EC09A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19B9F17E1F1ADEF000EC09A3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		19B9F1801F1ADEF000EC09A3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		19B9F1811F1ADEF000EC09A3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		19B9F1841F1ADEF000EC09A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B9F1891F1ADEF000EC09A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B9F18B1F1ADEF000EC09A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +64,15 @@
 		CE47C34D1F1AEE4E000156AA /* Drone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drone.m; path = Drones/Drone.m; sourceTree = "<group>"; };
 		CE47C34E1F1AEE4E000156AA /* DroneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DroneManager.h; path = Drones/DroneManager.h; sourceTree = "<group>"; };
 		CE47C34F1F1AEE4E000156AA /* DroneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DroneManager.m; path = Drones/DroneManager.m; sourceTree = "<group>"; };
+		CE47C3591F1AFB63000156AA /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CE47C35A1F1AFC37000156AA /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
+		CE47C35B1F1AFC37000156AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
+		CE47C35D1F1B02CE000156AA /* GameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtils.h; sourceTree = "<group>"; };
+		CE47C35E1F1B02CE000156AA /* GameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtils.m; sourceTree = "<group>"; };
+		CE47C3601F1B1052000156AA /* UIView+Shortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shortcuts.h"; sourceTree = "<group>"; };
+		CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shortcuts.m"; sourceTree = "<group>"; };
+		CE47C3661F1B1496000156AA /* CustomerDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDestination.h; sourceTree = "<group>"; };
+		CE47C3671F1B1496000156AA /* CustomerDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDestination.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +103,7 @@
 		19B9F16C1F1ADEF000EC09A3 = {
 			isa = PBXGroup;
 			children = (
+				1925D7E31F1B1AA800AFC9A8 /* grafixxx */,
 				19B9F1771F1ADEF000EC09A3 /* dronegame */,
 				19B9F1931F1ADEF000EC09A3 /* dronegameTests */,
 				19B9F19E1F1ADEF000EC09A3 /* dronegameUITests */,
@@ -115,16 +127,23 @@
 				CE47C34B1F1AEE39000156AA /* Drones */,
 				19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */,
 				19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */,
-				19B9F17E1F1ADEF000EC09A3 /* art.scnassets */,
 				19B9F1801F1ADEF000EC09A3 /* GameViewController.h */,
 				19B9F1811F1ADEF000EC09A3 /* GameViewController.m */,
 				CE47C3481F1AEE34000156AA /* TouchInputHandler.h */,
 				CE47C3491F1AEE34000156AA /* TouchInputHandler.m */,
-				19B9F1831F1ADEF000EC09A3 /* Main.storyboard */,
 				19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */,
 				19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */,
 				19B9F18B1F1ADEF000EC09A3 /* Info.plist */,
 				19B9F1781F1ADEF000EC09A3 /* Supporting Files */,
+				CE47C3591F1AFB63000156AA /* PrefixHeader.pch */,
+				CE47C35A1F1AFC37000156AA /* Customer.h */,
+				CE47C35B1F1AFC37000156AA /* Customer.m */,
+				CE47C35D1F1B02CE000156AA /* GameUtils.h */,
+				CE47C35E1F1B02CE000156AA /* GameUtils.m */,
+				CE47C3601F1B1052000156AA /* UIView+Shortcuts.h */,
+				CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */,
+				CE47C3661F1B1496000156AA /* CustomerDestination.h */,
+				CE47C3671F1B1496000156AA /* CustomerDestination.m */,
 			);
 			path = dronegame;
 			sourceTree = "<group>";
@@ -270,10 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B9F17F1F1ADEF000EC09A3 /* art.scnassets in Resources */,
 				19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */,
+				1925D7E41F1B1AA800AFC9A8 /* grafixxx in Resources */,
 				19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */,
-				19B9F1851F1ADEF000EC09A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +317,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */,
+				CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */,
+				CE47C3681F1B1496000156AA /* CustomerDestination.m in Sources */,
 				19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */,
 				19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */,
 				CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */,
 				CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */,
 				CE47C3501F1AEE4E000156AA /* Drone.m in Sources */,
+				CE47C35C1F1AFC37000156AA /* Customer.m in Sources */,
+				CE47C3621F1B1052000156AA /* UIView+Shortcuts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +361,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		19B9F1831F1ADEF000EC09A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19B9F1841F1ADEF000EC09A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -385,6 +399,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = dronegame/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -427,6 +442,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = dronegame/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

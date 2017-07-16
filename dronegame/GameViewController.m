@@ -6,16 +6,14 @@
 //  Copyright (c) 2017 ho. All rights reserved.
 //
 
-#import "GameViewController.h"
-#import "DroneManager.h"
-#import "Drone.h"
-#import "TouchInputHandler.h"
+#define RANDOM(__lowerBound__, __upperBound__) ((__lowerBound__) + ((__upperBound__) - (__lowerBound__)) * 1.0 * (arc4random() % 1000000) / 1000000.0)
 
 GameViewController * sharedGameViewController;
 
 @interface GameViewController()
 
 @property (nonatomic, strong) TouchInputHandler * touchInputHandler;
+@property (nonatomic, strong) NSTimer * customerCreationTimer;
 
 @end
 
@@ -23,9 +21,7 @@ GameViewController * sharedGameViewController;
 
 + (instancetype)instance
 {
-    if (!sharedGameViewController) {
-        sharedGameViewController = [[GameViewController alloc] init];
-    }
+    NSAssert(sharedGameViewController, @"this must not be nil");
     return sharedGameViewController;
 }
 
@@ -38,15 +34,48 @@ GameViewController * sharedGameViewController;
 {
     [super viewDidLoad];
 
-    self.view.backgroundColor = [UIColor greenColor];
+    sharedGameViewController = self;
+    
+    _customers = [NSMutableArray new];
     
     _touchInputHandler = [TouchInputHandler new];
-    
+    _touchInputHandler.view = self.view;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.view.backgroundColor = [UIColor greenColor];
+
     [[DroneManager instance] prepareDrones];
-    
+
     for (Drone * drone in [DroneManager instance].drones) {
-        [self.view addSubview:drone];
+      [self.view addSubview:drone];
     }
+    
+    _customerCreationTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(addNewCustomer) userInfo:nil repeats:YES];
+}
+
+- (void)addNewCustomer
+{
+    Customer * customer = [Customer new];
+    [customer popIn];
+    [_customers addObject:customer];
+    [self.view addSubview:customer];
+    [self.view addSubview:customer.destination];
+}
+
+- (Customer *)getNearestCustomer:(CGPoint)pt
+{
+    return (Customer *)[GameUtils getViewNearPosition:pt array:_customers];
+}
+
+- (CGPoint)randomPosition
+{
+    CGSize size = self.view.size;
+    CGFloat x = RANDOM(0, size.width);
+    CGFloat y = RANDOM(0, size.height);
+    return CGPointMake(x, y);
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -74,7 +103,8 @@ GameViewController * sharedGameViewController;
     return YES;
 }
 
-- (BOOL)prefersStatusBarHidden {
+- (BOOL)prefersStatusBarHidden
+{
     return YES;
 }
 
@@ -91,6 +121,11 @@ GameViewController * sharedGameViewController;
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)dealloc
+{
+    [_customerCreationTimer invalidate];
 }
 
 @end

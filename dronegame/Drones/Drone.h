@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class CustomerDestination;
+
 @interface Drone : UIView
 
-@property (nonatomic) BOOL selected;
+@property (nonatomic) BOOL selected, flying;
 
+- (void)pickUpCustomer:(Customer *)customer;
+- (void)flyToDestination:(CustomerDestination *)destination;
 - (void)flyToLocation:(CGPoint)pt;
+- (CustomerDestination *)getCustomerDestinationNearPoint:(CGPoint)pt;
 
 @end
