@@ -19,6 +19,8 @@
 		CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34F1F1AEE4E000156AA /* DroneManager.m */; };
 		CE47C35C1F1AFC37000156AA /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35B1F1AFC37000156AA /* Customer.m */; };
 		CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C35E1F1B02CE000156AA /* GameUtils.m */; };
+		CE47C3621F1B1052000156AA /* UIView+Shortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */; };
+		CE47C3681F1B1496000156AA /* CustomerDestination.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3671F1B1496000156AA /* CustomerDestination.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		CE47C35B1F1AFC37000156AA /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		CE47C35D1F1B02CE000156AA /* GameUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtils.h; sourceTree = "<group>"; };
 		CE47C35E1F1B02CE000156AA /* GameUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameUtils.m; sourceTree = "<group>"; };
+		CE47C3601F1B1052000156AA /* UIView+Shortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Shortcuts.h"; sourceTree = "<group>"; };
+		CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shortcuts.m"; sourceTree = "<group>"; };
+		CE47C3661F1B1496000156AA /* CustomerDestination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDestination.h; sourceTree = "<group>"; };
+		CE47C3671F1B1496000156AA /* CustomerDestination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDestination.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,10 @@
 				CE47C35B1F1AFC37000156AA /* Customer.m */,
 				CE47C35D1F1B02CE000156AA /* GameUtils.h */,
 				CE47C35E1F1B02CE000156AA /* GameUtils.m */,
+				CE47C3601F1B1052000156AA /* UIView+Shortcuts.h */,
+				CE47C3611F1B1052000156AA /* UIView+Shortcuts.m */,
+				CE47C3661F1B1496000156AA /* CustomerDestination.h */,
+				CE47C3671F1B1496000156AA /* CustomerDestination.m */,
 			);
 			path = dronegame;
 			sourceTree = "<group>";
@@ -304,12 +314,14 @@
 			files = (
 				19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */,
 				CE47C35F1F1B02CE000156AA /* GameUtils.m in Sources */,
+				CE47C3681F1B1496000156AA /* CustomerDestination.m in Sources */,
 				19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */,
 				19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */,
 				CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */,
 				CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */,
 				CE47C3501F1AEE4E000156AA /* Drone.m in Sources */,
 				CE47C35C1F1AFC37000156AA /* Customer.m in Sources */,
+				CE47C3621F1B1052000156AA /* UIView+Shortcuts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

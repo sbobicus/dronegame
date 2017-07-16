@@ -49,18 +49,16 @@ GameViewController * sharedGameViewController;
         [self.view addSubview:drone];
     }
     
-    _customerCreationTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(addNewCustomer) userInfo:nil repeats:YES];
+    _customerCreationTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(addNewCustomer) userInfo:nil repeats:YES];
 }
 
 - (void)addNewCustomer
 {
     Customer * customer = [Customer new];
-    
+    [customer popIn];
     [_customers addObject:customer];
-    
-    customer.center = [self randomPosition];
-    
     [self.view addSubview:customer];
+    [self.view addSubview:customer.destination];
 }
 
 - (Customer *)getNearestCustomer:(CGPoint)pt
@@ -70,7 +68,7 @@ GameViewController * sharedGameViewController;
 
 - (CGPoint)randomPosition
 {
-    CGSize size = self.view.frame.size;
+    CGSize size = self.view.size;
     CGFloat x = RANDOM(0, size.width);
     CGFloat y = RANDOM(0, size.height);
     return CGPointMake(x, y);
@@ -101,7 +99,8 @@ GameViewController * sharedGameViewController;
     return YES;
 }
 
-- (BOOL)prefersStatusBarHidden {
+- (BOOL)prefersStatusBarHidden
+{
     return YES;
 }
 

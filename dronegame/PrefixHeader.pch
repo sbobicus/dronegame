@@ -15,5 +15,7 @@
 #import "TouchInputHandler.h"
 #import "Customer.h"
 #import "GameUtils.h"
+#import "UIView+Shortcuts.h"
+#import "CustomerDestination.h"
 
 #endif /* PrefixHeader_pch */

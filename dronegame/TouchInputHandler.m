@@ -10,6 +10,7 @@
 
 @property (nonatomic, strong) Drone * selectedDrone;
 @property (nonatomic, strong) Customer * nearestCustomer;
+@property (nonatomic, strong) CustomerDestination * nearestCustomerDestination;
 
 @end
 
@@ -20,6 +21,8 @@
     CGPoint pt = [self positionForTouches:touches];
     _selectedDrone = [[DroneManager instance] getDroneNearPosition:pt];
     _selectedDrone.selected = YES;
+    
+    [self updateNearestObjectWithPosition:pt];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -32,7 +35,26 @@
     
     _selectedDrone.transform = CGAffineTransformMakeRotation(angle);
     
+    [self updateNearestObjectWithPosition:pt];
+}
+
+- (void)updateNearestObjectWithPosition:(CGPoint)pt
+{
+    if (_selectedDrone) {
+        CustomerDestination * destinaiton = [_selectedDrone getCustomerDestinationNearPoint:pt];
+        
+        if (destinaiton != _nearestCustomerDestination) {
+            _nearestCustomerDestination.highlighted = NO;
+            _nearestCustomerDestination = destinaiton;
+            _nearestCustomerDestination.highlighted = YES;
+        }
+    }
+    
     Customer * nearestCustomer = [[GameViewController instance] getNearestCustomer:pt];
+    
+    if (_nearestCustomerDestination) {
+        nearestCustomer = nil;
+    }
     
     if (nearestCustomer != _nearestCustomer) {
         _nearestCustomer.selected = NO;
@@ -48,16 +70,22 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    NSAssert(!(_nearestCustomer && _nearestCustomerDestination), @"at least one of these must be nil");
+    
     if (_nearestCustomer) {
         [_selectedDrone pickUpCustomer:_nearestCustomer];
+    } else if (_nearestCustomerDestination) {
+        [_selectedDrone flyToDestination:_nearestCustomerDestination];
     } else {
         CGPoint pt = [self positionForTouches:touches];
         [_selectedDrone flyToLocation:pt];
     }
     
+    _nearestCustomerDestination.highlighted = NO;
     _nearestCustomer.selected = NO;
     _selectedDrone.selected = NO;
     
+    _nearestCustomerDestination = nil;
     _nearestCustomer = nil;
     _selectedDrone = nil;
 }
