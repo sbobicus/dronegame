@@ -27,6 +27,13 @@
         _vehicleWidth = 44.0;
         self.frame = CGRectMake(0, 0, _vehicleWidth, _vehicleWidth);
         _boardedCustomers = [NSMutableArray new];
+
+        UIImage *drone = [UIImage imageNamed:@"grafixxx/drone.png"];
+        UIImageView *droneImageView = [[UIImageView alloc] initWithImage:drone];
+        droneImageView.frame = droneImageView.bounds;
+        droneImageView.center = self.boundsCenter;
+        [self addSubview:droneImageView];
+
         [self updateColor];
     }
     return self;
