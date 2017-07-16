@@ -33,22 +33,26 @@ GameViewController * sharedGameViewController;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     sharedGameViewController = self;
-    
-    self.view.backgroundColor = [UIColor greenColor];
     
     _customers = [NSMutableArray new];
     
     _touchInputHandler = [TouchInputHandler new];
     _touchInputHandler.view = self.view;
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.view.backgroundColor = [UIColor greenColor];
+
     [[DroneManager instance] prepareDrones];
-    
+
     for (Drone * drone in [DroneManager instance].drones) {
-        [self.view addSubview:drone];
+      [self.view addSubview:drone];
     }
-    
+
     _customerCreationTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(addNewCustomer) userInfo:nil repeats:YES];
 }
 

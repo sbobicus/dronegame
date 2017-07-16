@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1925D7E41F1B1AA800AFC9A8 /* grafixxx in Resources */ = {isa = PBXBuildFile; fileRef = 1925D7E31F1B1AA800AFC9A8 /* grafixxx */; };
 		19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1791F1ADEF000EC09A3 /* main.m */; };
 		19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */; };
 		19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1811F1ADEF000EC09A3 /* GameViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1925D7E31F1B1AA800AFC9A8 /* grafixxx */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grafixxx; path = dronegame/grafixxx; sourceTree = "<group>"; };
 		19B9F1751F1ADEF000EC09A3 /* dronegame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dronegame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B9F1791F1ADEF000EC09A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		19B9F16C1F1ADEF000EC09A3 = {
 			isa = PBXGroup;
 			children = (
+				1925D7E31F1B1AA800AFC9A8 /* grafixxx */,
 				19B9F1771F1ADEF000EC09A3 /* dronegame */,
 				19B9F1931F1ADEF000EC09A3 /* dronegameTests */,
 				19B9F19E1F1ADEF000EC09A3 /* dronegameUITests */,
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */,
+				1925D7E41F1B1AA800AFC9A8 /* grafixxx in Resources */,
 				19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
