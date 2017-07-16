@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1791F1ADEF000EC09A3 /* main.m */; };
 		19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */; };
-		19B9F17F1F1ADEF000EC09A3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F17E1F1ADEF000EC09A3 /* art.scnassets */; };
 		19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1811F1ADEF000EC09A3 /* GameViewController.m */; };
-		19B9F1851F1ADEF000EC09A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1831F1ADEF000EC09A3 /* Main.storyboard */; };
 		19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */; };
 		19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */; };
 		19B9F1951F1ADEF000EC09A3 /* dronegameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1941F1ADEF000EC09A3 /* dronegameTests.m */; };
@@ -43,10 +41,8 @@
 		19B9F1791F1ADEF000EC09A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		19B9F17E1F1ADEF000EC09A3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		19B9F1801F1ADEF000EC09A3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		19B9F1811F1ADEF000EC09A3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		19B9F1841F1ADEF000EC09A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19B9F1891F1ADEF000EC09A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19B9F18B1F1ADEF000EC09A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,12 +111,10 @@
 				CE47C34B1F1AEE39000156AA /* Drones */,
 				19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */,
 				19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */,
-				19B9F17E1F1ADEF000EC09A3 /* art.scnassets */,
 				19B9F1801F1ADEF000EC09A3 /* GameViewController.h */,
 				19B9F1811F1ADEF000EC09A3 /* GameViewController.m */,
 				CE47C3481F1AEE34000156AA /* TouchInputHandler.h */,
 				CE47C3491F1AEE34000156AA /* TouchInputHandler.m */,
-				19B9F1831F1ADEF000EC09A3 /* Main.storyboard */,
 				19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */,
 				19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */,
 				19B9F18B1F1ADEF000EC09A3 /* Info.plist */,
@@ -270,10 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B9F17F1F1ADEF000EC09A3 /* art.scnassets in Resources */,
 				19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */,
 				19B9F1871F1ADEF000EC09A3 /* Assets.xcassets in Resources */,
-				19B9F1851F1ADEF000EC09A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,14 +331,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		19B9F1831F1ADEF000EC09A3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19B9F1841F1ADEF000EC09A3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
