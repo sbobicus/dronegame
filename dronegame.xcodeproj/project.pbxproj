@@ -16,6 +16,9 @@
 		19B9F18A1F1ADEF000EC09A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */; };
 		19B9F1951F1ADEF000EC09A3 /* dronegameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F1941F1ADEF000EC09A3 /* dronegameTests.m */; };
 		19B9F1A01F1ADEF000EC09A3 /* dronegameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9F19F1F1ADEF000EC09A3 /* dronegameUITests.m */; };
+		CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C3491F1AEE34000156AA /* TouchInputHandler.m */; };
+		CE47C3501F1AEE4E000156AA /* Drone.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34D1F1AEE4E000156AA /* Drone.m */; };
+		CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE47C34F1F1AEE4E000156AA /* DroneManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		19B9F19B1F1ADEF000EC09A3 /* dronegameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dronegameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B9F19F1F1ADEF000EC09A3 /* dronegameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dronegameUITests.m; sourceTree = "<group>"; };
 		19B9F1A11F1ADEF000EC09A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE47C3481F1AEE34000156AA /* TouchInputHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchInputHandler.h; sourceTree = "<group>"; };
+		CE47C3491F1AEE34000156AA /* TouchInputHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchInputHandler.m; sourceTree = "<group>"; };
+		CE47C34C1F1AEE4E000156AA /* Drone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drone.h; path = Drones/Drone.h; sourceTree = "<group>"; };
+		CE47C34D1F1AEE4E000156AA /* Drone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Drone.m; path = Drones/Drone.m; sourceTree = "<group>"; };
+		CE47C34E1F1AEE4E000156AA /* DroneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DroneManager.h; path = Drones/DroneManager.h; sourceTree = "<group>"; };
+		CE47C34F1F1AEE4E000156AA /* DroneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DroneManager.m; path = Drones/DroneManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +112,14 @@
 		19B9F1771F1ADEF000EC09A3 /* dronegame */ = {
 			isa = PBXGroup;
 			children = (
+				CE47C34B1F1AEE39000156AA /* Drones */,
 				19B9F17B1F1ADEF000EC09A3 /* AppDelegate.h */,
 				19B9F17C1F1ADEF000EC09A3 /* AppDelegate.m */,
 				19B9F17E1F1ADEF000EC09A3 /* art.scnassets */,
 				19B9F1801F1ADEF000EC09A3 /* GameViewController.h */,
 				19B9F1811F1ADEF000EC09A3 /* GameViewController.m */,
+				CE47C3481F1AEE34000156AA /* TouchInputHandler.h */,
+				CE47C3491F1AEE34000156AA /* TouchInputHandler.m */,
 				19B9F1831F1ADEF000EC09A3 /* Main.storyboard */,
 				19B9F1861F1ADEF000EC09A3 /* Assets.xcassets */,
 				19B9F1881F1ADEF000EC09A3 /* LaunchScreen.storyboard */,
@@ -141,6 +153,17 @@
 				19B9F1A11F1ADEF000EC09A3 /* Info.plist */,
 			);
 			path = dronegameUITests;
+			sourceTree = "<group>";
+		};
+		CE47C34B1F1AEE39000156AA /* Drones */ = {
+			isa = PBXGroup;
+			children = (
+				CE47C34C1F1AEE4E000156AA /* Drone.h */,
+				CE47C34D1F1AEE4E000156AA /* Drone.m */,
+				CE47C34E1F1AEE4E000156AA /* DroneManager.h */,
+				CE47C34F1F1AEE4E000156AA /* DroneManager.m */,
+			);
+			name = Drones;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +233,7 @@
 				TargetAttributes = {
 					19B9F1741F1ADEF000EC09A3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = P5E296CH36;
 					};
 					19B9F18F1F1ADEF000EC09A3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -277,6 +301,9 @@
 				19B9F17D1F1ADEF000EC09A3 /* AppDelegate.m in Sources */,
 				19B9F1821F1ADEF000EC09A3 /* GameViewController.m in Sources */,
 				19B9F17A1F1ADEF000EC09A3 /* main.m in Sources */,
+				CE47C34A1F1AEE34000156AA /* TouchInputHandler.m in Sources */,
+				CE47C3511F1AEE4E000156AA /* DroneManager.m in Sources */,
+				CE47C3501F1AEE4E000156AA /* Drone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +444,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P5E296CH36;
 				INFOPLIST_FILE = dronegame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -428,10 +457,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P5E296CH36;
 				INFOPLIST_FILE = dronegame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ha.dronegame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -502,6 +533,7 @@
 				19B9F1A61F1ADEF000EC09A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19B9F1A71F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegameTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +542,7 @@
 				19B9F1A91F1ADEF000EC09A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19B9F1AA1F1ADEF000EC09A3 /* Build configuration list for PBXNativeTarget "dronegameUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +551,7 @@
 				19B9F1AC1F1ADEF000EC09A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

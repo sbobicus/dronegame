@@ -11,4 +11,7 @@
 
 @interface GameViewController : UIViewController
 
++ (instancetype)instance;
++ (void)destroyInstance;
+
 @end
